@@ -17,32 +17,25 @@ jobs:
       - eb/setup
       - run:
         name: Install Angular CLI
-        command: |
-          npm i -g @angular/cli
+        command: npm i -g @angular/cli
       - run:
         name: Install Frontend Deps
-        command: |
-          npm run frontend:install
+        command: npm run frontend:install
       - run:
         name: Install Backend Deps
-        command: |
-          npm run backend:install
+        command: npm run backend:install
       - run:
         name: Build Frontend
-        command: |
-          npm run frontend:build
+        command: npm run frontend:build
       - run:
         name: Build Backend
-        command: |
-          npm run backend:build
+        command: npm run backend:build
       - run:
         name: Deploy Frontend
-        command: |
-          npm run frontend:deploy
+        command: npm run frontend:deploy
       - run:
         name: Deploy Backend
-        command: |
-          npm run backend:deploy
+        command: npm run backend:deploy
 
 workflows:
   udagram:
