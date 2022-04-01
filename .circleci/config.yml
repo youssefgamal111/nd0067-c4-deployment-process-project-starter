@@ -12,30 +12,30 @@ jobs:
     steps:
       - checkout
       - node/install:
-        node-version: "14.15"
+          node-version: "14.15"
       - aws-cli/setup
       - eb/setup
       - run:
-        name: Install Angular CLI
-        command: npm i -g @angular/cli
+          name: Install Angular CLI
+          command: npm i -g @angular/cli
       - run:
-        name: Install Frontend Deps
-        command: npm run frontend:install
+          name: Install Frontend Deps
+          command: npm run frontend:install
       - run:
-        name: Install Backend Deps
-        command: npm run backend:install
+          name: Install Backend Deps
+          command: npm run backend:install
       - run:
-        name: Build Frontend
-        command: npm run frontend:build
+          name: Build Frontend
+          command: npm run frontend:build
       - run:
-        name: Build Backend
-        command: npm run backend:build
+          name: Build Backend
+          command: npm run backend:build
       - run:
-        name: Deploy Frontend
-        command: npm run frontend:deploy
+          name: Deploy Frontend
+          command: npm run frontend:deploy
       - run:
-        name: Deploy Backend
-        command: npm run backend:deploy
+          name: Deploy Backend
+          command: npm run backend:deploy
 
 workflows:
   udagram:
