@@ -7,6 +7,9 @@ orbs:
 
 jobs:
   build:
+  filters:
+            branches:
+              only: /server\/.*/
     docker:
       - image: "cimg/base:stable"
     steps:
@@ -41,3 +44,4 @@ workflows:
   udagram:
     jobs:
       - build
+      
